@@ -305,6 +305,20 @@ footer{padding:60px 0 120px;position:relative;z-index:2}
 .mbar{display:none}
 
 
+
+/* points: one by one */
+.pts-wrap{position:relative}
+.pt.seq{opacity:0;transform:translateY(70px) scale(.93);filter:blur(6px);transition:opacity .7s var(--ease),transform .85s cubic-bezier(.2,.9,.25,1.12),filter .7s var(--ease)}
+.pt.seq.show{opacity:1;transform:none;filter:none}
+.pt.seq.show:hover{transform:translateY(-6px)}
+.vs .vsL.rv{transform:translateX(-70px)}
+.vs .vsR.rv{transform:translateX(70px);transition-delay:.45s}
+.vs .rv.in{transform:none}
+@media (min-width:1081px){
+  .pts-wrap{height:calc(100vh + 1400px);margin-top:20px}
+  .pts-pin{position:sticky;top:max(100px,calc(50vh - 260px))}
+  .pts-wrap .points{margin-top:0}
+}
 /* ===== MOTION ===== */
 #prog{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--persimmon),var(--honey));z-index:120;border-radius:0 3px 3px 0}
 /* intro doors */
@@ -425,7 +439,7 @@ footer{padding:60px 0 120px;position:relative;z-index:2}
   .cur-sound{top:80px;right:16px}
   .cur-cap{bottom:13vh;padding:0 20px}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.lni{transform:none}#intro{display:none}.case .cv{clip-path:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.pt.seq{opacity:1;transform:none;filter:none}.lni{transform:none}#intro{display:none}.case .cv{clip-path:none}}
 </style>
 </head>
 <body>
@@ -498,17 +512,17 @@ footer{padding:60px 0 120px;position:relative;z-index:2}
 <section class="sec" id="why"><div class="wrap">
   <div class="head" style="margin-bottom:40px"><span class="tag">Why Medical Only</span></div>
   <p class="statement" id="stmt">환자는 아픈 상태에서, 대부분 휴대폰으로 병원을 찾습니다. 화려함보다 먼저 필요한 건 <span class="hl">신뢰</span>, <span class="hl">정확한 정보</span>, 그리고 망설임 없이 누를 수 있는 <span class="hl">상담 버튼</span>입니다.</p>
-  <div class="points">
-    <article class="pt rv"><span class="no">01</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></div><h3>모바일에서 먼저 완성</h3><p>작은 화면 기준으로 글자 크기, 버튼 간격, 이미지 용량을 먼저 맞춥니다. 진료시간과 위치를 찾느라 헤매지 않게 합니다.</p></article>
-    <article class="pt rv d1"><span class="no">02</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div><h3>원클릭 상담 연결</h3><p>전화, 카카오톡 채널, 네이버 예약, 길찾기를 화면 어디서든 한 번에 누를 수 있게 고정 배치합니다.</p></article>
-    <article class="pt rv d2"><span class="no">03</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>의료광고 기준을 고려한 문구</h3><p>'최고', '100% 완치' 같은 과장 표현, 전후 사진의 무분별한 사용처럼 문제 소지가 있는 표현을 제작 단계에서 걸러냅니다.</p></article>
-    <article class="pt rv"><span class="no">04</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>가볍고 빠른 로딩</h3><p>이미지 최적화와 불필요한 스크립트 제거로 첫 화면이 빠르게 뜨게 합니다. 느린 홈페이지는 환자가 기다려 주지 않습니다.</p></article>
-    <article class="pt rv d1"><span class="no">05</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></div><h3>검색에 잡히는 구조</h3><p>지역명과 진료과목 중심의 제목·설명 태그, 네이버·구글 검색 등록 기본 세팅까지. 플레이스와 홈페이지가 서로를 보완합니다.</p></article>
-    <article class="pt rv d2"><span class="no">06</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.9 1.8-1.8 0-1.2-1-1.6-1-2.7 0-1 .8-1.7 1.8-1.7H17a4 4 0 0 0 4-4C21 6.5 17 3 12 3z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10.5" cy="7.5" r="1"/><circle cx="15" cy="7.5" r="1"/></svg></div><h3>진료과목별 톤 설계</h3><p>같은 템플릿을 돌려쓰지 않습니다. 치과의 산뜻함, 한의원의 아늑함처럼 병원의 성격부터 정하고 디자인합니다.</p></article>
-  </div>
+  <div class="pts-wrap" id="ptsWrap"><div class="pts-pin"><div class="points">
+    <article class="pt seq"><span class="no">01</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></div><h3>모바일에서 먼저 완성</h3><p>작은 화면 기준으로 글자 크기, 버튼 간격, 이미지 용량을 먼저 맞춥니다. 진료시간과 위치를 찾느라 헤매지 않게 합니다.</p></article>
+    <article class="pt seq"><span class="no">02</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div><h3>원클릭 상담 연결</h3><p>전화, 카카오톡 채널, 네이버 예약, 길찾기를 화면 어디서든 한 번에 누를 수 있게 고정 배치합니다.</p></article>
+    <article class="pt seq"><span class="no">03</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>의료광고 기준을 고려한 문구</h3><p>'최고', '100% 완치' 같은 과장 표현, 전후 사진의 무분별한 사용처럼 문제 소지가 있는 표현을 제작 단계에서 걸러냅니다.</p></article>
+    <article class="pt seq"><span class="no">04</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>가볍고 빠른 로딩</h3><p>이미지 최적화와 불필요한 스크립트 제거로 첫 화면이 빠르게 뜨게 합니다. 느린 홈페이지는 환자가 기다려 주지 않습니다.</p></article>
+    <article class="pt seq"><span class="no">05</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></div><h3>검색에 잡히는 구조</h3><p>지역명과 진료과목 중심의 제목·설명 태그, 네이버·구글 검색 등록 기본 세팅까지. 플레이스와 홈페이지가 서로를 보완합니다.</p></article>
+    <article class="pt seq"><span class="no">06</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.9 1.8-1.8 0-1.2-1-1.6-1-2.7 0-1 .8-1.7 1.8-1.7H17a4 4 0 0 0 4-4C21 6.5 17 3 12 3z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10.5" cy="7.5" r="1"/><circle cx="15" cy="7.5" r="1"/></svg></div><h3>진료과목별 톤 설계</h3><p>같은 템플릿을 돌려쓰지 않습니다. 치과의 산뜻함, 한의원의 아늑함처럼 병원의 성격부터 정하고 디자인합니다.</p></article>
+  </div></div></div>
   <div class="vs">
-    <div class="bad rv"><h4>흔히 보는 병원 홈페이지</h4><ul><li>PC 화면을 그대로 줄인 모바일 페이지</li><li>전화번호를 찾으려면 맨 아래까지 스크롤</li><li>몇 년째 바뀌지 않은 진료시간과 공지</li><li>문제 소지가 있는 과장 문구와 무료 이미지</li></ul></div>
-    <div class="good rv d1"><h4>온메디가 만드는 홈페이지</h4><ul><li>휴대폰 화면 기준으로 처음부터 설계</li><li>상담 · 전화 · 길찾기 버튼 상시 노출</li><li>진료시간 · 휴진 안내를 첫 화면 가까이</li><li>병원 실제 정보와 맥락에 맞는 사진 · 문구</li></ul></div>
+    <div class="bad rv vsL"><h4>흔히 보는 병원 홈페이지</h4><ul><li>PC 화면을 그대로 줄인 모바일 페이지</li><li>전화번호를 찾으려면 맨 아래까지 스크롤</li><li>몇 년째 바뀌지 않은 진료시간과 공지</li><li>문제 소지가 있는 과장 문구와 무료 이미지</li></ul></div>
+    <div class="good rv vsR"><h4>온메디가 만드는 홈페이지</h4><ul><li>휴대폰 화면 기준으로 처음부터 설계</li><li>상담 · 전화 · 길찾기 버튼 상시 노출</li><li>진료시간 · 휴진 안내를 첫 화면 가까이</li><li>병원 실제 정보와 맥락에 맞는 사진 · 문구</li></ul></div>
   </div>
 </div></section>
 
@@ -808,7 +822,7 @@ const prog=$('#prog'),mq=$('.mq'),mqA=$('.mq-in').getAnimations?$('.mq-in').getA
 function tick(){const y=scrollY,v=y-lastY;lastY=y;vel+=(v-vel)*.18;if(Math.abs(v)>1)dir=v<0?-1:1;
   const h=document.documentElement.scrollHeight-innerHeight;prog.style.width=(h>0?y/h*100:0)+'%';
   if(!reduce){mq.style.setProperty('--sk',clamp(vel*.09,-7,7).toFixed(2)+'deg');if(mqA)mqA.playbackRate=dir*(1+Math.min(5,Math.abs(vel)*.07))}
-  curtain();requestAnimationFrame(tick)}
+  curtain();ptsTick();requestAnimationFrame(tick)}
 requestAnimationFrame(tick);
 /* cursor + magnetic + tilt (desktop) */
 if(fine&&!reduce){
@@ -823,6 +837,19 @@ if(fine&&!reduce){
     stage.addEventListener('mouseleave',()=>els.forEach(el=>el.style.translate='0 0'))}
   $$('.pt,.scp').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(800px) rotateX('+(-y*6).toFixed(2)+'deg) rotateY('+(x*6).toFixed(2)+'deg) translateY(-6px)'});c.addEventListener('mouseleave',()=>{c.style.transform=''})});
 }
+
+/* points one by one */
+const ptsWrap=$('#ptsWrap'),ptsPin=ptsWrap.querySelector('.pts-pin'),ptsCards=$$('.pt.seq');const deskQ=matchMedia('(min-width:1081px)');
+let ptsIO=null;
+function ptsMode(){if(reduce){ptsCards.forEach(c=>c.classList.add('show'));return}
+  if(deskQ.matches){if(ptsIO){ptsIO.disconnect();ptsIO=null}}
+  else if(!ptsIO){ptsIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');ptsIO.unobserve(e.target)}}),{threshold:.35,rootMargin:'0px 0px -8% 0px'});ptsCards.forEach(c=>{if(!c.classList.contains('show'))ptsIO.observe(c)})}}
+function ptsTick(){if(reduce||!deskQ.matches)return;const r=ptsWrap.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;
+  const stickTop=parseFloat(getComputedStyle(ptsPin).top)||100;const range=ptsWrap.offsetHeight-ptsPin.offsetHeight;const p=clamp((stickTop-r.top)/range,-1,1);
+  const n=p<=-.12?0:Math.min(ptsCards.length,Math.floor((p+.12)*7.5)+1);
+  ptsCards.forEach((c,i)=>c.classList.toggle('show',i<n))}
+ptsMode();deskQ.addEventListener?deskQ.addEventListener('change',ptsMode):deskQ.addListener(ptsMode);
+addEventListener('scroll',ptsTick,{passive:true});addEventListener('resize',ptsTick);ptsTick();
 })();
 </script>
 </body>
