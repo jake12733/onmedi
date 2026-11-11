@@ -27,7 +27,7 @@
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 html,body{overflow-x:clip}
 body{font-family:var(--sans);background:var(--cream);color:var(--cocoa);line-height:1.65;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.35;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.3 0 0 0 0 0.2 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+body::before{content:none;position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.35;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.3 0 0 0 0 0.2 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
@@ -79,7 +79,7 @@ nav.gnb a:hover,nav.gnb a.act{background:var(--oat);color:var(--cocoa)}
 .hero{padding:40px 0 70px;position:relative}
 .hero-g{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
 .pill{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1.5px solid var(--sand);padding:9px 16px 9px 10px;border-radius:999px;font-weight:600;font-size:14.5px}
-.pill i{width:26px;height:26px;border-radius:50%;background:var(--blush);display:grid;place-items:center;font-style:normal;font-size:14px}
+.pill i{width:28px;height:28px;border-radius:50%;background:var(--blush);display:grid;place-items:center;font-style:normal;color:var(--persimmon2)}.pill i svg{width:16px;height:16px}
 .hero h1{font-family:var(--soft);font-weight:700;font-size:clamp(40px,5.4vw,74px);line-height:1.22;letter-spacing:-.04em;margin-top:26px}
 .hero h1 .warm{color:var(--persimmon2);position:relative;display:inline-block}
 .hero h1 .warm svg{position:absolute;left:-4%;bottom:-.12em;width:108%;height:.42em;overflow:visible}
@@ -102,7 +102,7 @@ nav.gnb a:hover,nav.gnb a.act{background:var(--oat);color:var(--cocoa)}
 @keyframes float1{50%{transform:rotate(-7deg) translateY(-12px)}}
 @keyframes float2{50%{transform:rotate(6deg) translateY(10px)}}
 .chip{position:absolute;z-index:3;display:flex;align-items:center;gap:10px;background:var(--card);border-radius:18px;padding:12px 16px 12px 12px;box-shadow:var(--sh);font-size:14px;font-weight:700}
-.chip i{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;font-style:normal;font-size:17px}
+.chip i{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;font-style:normal;color:var(--persimmon2)}.chip i svg{width:19px;height:19px}
 .chip small{display:block;font-size:12px;color:var(--mute);font-weight:600}
 .c1{left:0;bottom:120px}.c1 i{background:var(--blush)}
 .c2{right:0;bottom:60px}.c2 i{background:var(--sage2)}
@@ -123,7 +123,7 @@ nav.gnb a:hover,nav.gnb a.act{background:var(--oat);color:var(--cocoa)}
 .points{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:90px}
 .pt{background:var(--card);border-radius:var(--r);padding:34px 30px;box-shadow:var(--sh);border:1.5px solid rgba(234,215,190,.6);transition:transform .45s var(--ease)}
 .pt:hover{transform:translateY(-6px)}
-.pt .ic{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;font-size:24px;background:var(--oat)}
+.pt .ic{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;background:var(--oat);color:var(--persimmon2)}.pt .ic svg{width:26px;height:26px}
 .pt .no{float:right;font-family:var(--en);font-style:italic;color:var(--mute);font-size:18px}
 .pt h3{font-family:var(--soft);font-size:22px;margin-top:22px;letter-spacing:-.02em}
 .pt p{color:var(--cocoa2);font-size:15px;margin-top:8px}
@@ -216,12 +216,12 @@ nav.gnb a:hover,nav.gnb a.act{background:var(--oat);color:var(--cocoa)}
 
 /* scope */
 .scope{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.sc{background:var(--card);border-radius:var(--r);padding:32px 26px;box-shadow:var(--sh);display:flex;flex-direction:column;border:1.5px solid rgba(234,215,190,.6)}
-.sc .rn{font-family:var(--en);font-style:italic;font-weight:700;font-size:44px;color:var(--persimmon);line-height:1}
-.sc h3{font-family:var(--soft);font-size:21px;margin-top:18px;letter-spacing:-.02em}
-.sc p{color:var(--cocoa2);font-size:14.5px;margin-top:8px}
-.sc ul{list-style:none;margin-top:18px;padding-top:16px;border-top:1.5px dashed var(--sand);display:flex;flex-direction:column;gap:7px;font-size:14px;color:var(--cocoa2)}
-.sc li::before{content:"·";color:var(--persimmon);font-weight:900;margin-right:8px}
+.scp{background:var(--card);border-radius:var(--r);padding:32px 26px;box-shadow:var(--sh);display:flex;flex-direction:column;border:1.5px solid rgba(234,215,190,.6)}
+.scp .rn{font-family:var(--en);font-style:italic;font-weight:700;font-size:44px;color:var(--persimmon);line-height:1}
+.scp h3{font-family:var(--soft);font-size:21px;margin-top:18px;letter-spacing:-.02em}
+.scp p{color:var(--cocoa2);font-size:14.5px;margin-top:8px}
+.scp ul{list-style:none;margin-top:18px;padding-top:16px;border-top:1.5px dashed var(--sand);display:flex;flex-direction:column;gap:7px;font-size:14px;color:var(--cocoa2)}
+.scp li::before{content:"·";color:var(--persimmon);font-weight:900;margin-right:8px}
 
 /* process */
 .proc{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
@@ -381,8 +381,8 @@ footer{padding:60px 0 120px;position:relative;z-index:2}
 <!-- HERO -->
 <section class="hero"><div class="wrap hero-g">
   <div class="rv">
-    <span class="pill"><i>🩺</i>병원 · 의원 홈페이지 전문 제작</span>
-    <h1>환자가 먼저 느끼는 건<br>병원의 <span class="warm">온도<svg viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M4 28C50 10 120 8 196 22" stroke="#F2B35B" stroke-width="12" fill="none" stroke-linecap="round" opacity=".7"/></svg></span>입니다</h1>
+    <span class="pill"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="11" r="2"/></svg></i>병원 · 의원 홈페이지 전문 제작</span>
+    <h1>환자가 먼저<br>느끼는 건<br>병원의 <span class="warm">온도<svg viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M4 28C50 10 120 8 196 22" stroke="#F2B35B" stroke-width="12" fill="none" stroke-linecap="round" opacity=".7"/></svg></span>입니다</h1>
     <p class="sub">아픈 사람은 휴대폰으로 병원을 고릅니다. 온메디는 첫 화면부터 따뜻하고, 망설임 없이 전화·예약으로 이어지는 병·의원 홈페이지만 만듭니다.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-p">무료 상담 신청 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -398,9 +398,9 @@ footer{padding:60px 0 120px;position:relative;z-index:2}
     <div class="sun"></div>
     <div class="phone ph2"><img src="assets/medi-mobile.jpg" alt=""></div>
     <div class="phone ph1"><img src="assets/elpis-mobile.jpg" alt=""></div>
-    <div class="chip c1"><i>📞</i><div>전화 상담 연결<small>화면 어디서든 한 번에</small></div></div>
-    <div class="chip c2"><i>🗓️</i><div>진료 예약 버튼<small>손가락 너비로 크게</small></div></div>
-    <div class="chip c3"><i>📍</i><div>길찾기 · 진료시간<small>첫 화면 가까이</small></div></div>
+    <div class="chip c1"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></i><div>전화 상담 연결<small>화면 어디서든 한 번에</small></div></div>
+    <div class="chip c2"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17M8.5 14.5l2 2 4-4"/></svg></i><div>진료 예약 버튼<small>손가락 너비로 크게</small></div></div>
+    <div class="chip c3"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></i><div>길찾기 · 진료시간<small>첫 화면 가까이</small></div></div>
   </div>
 </div>
 <div class="mq" aria-hidden="true"><div class="mq-in">
@@ -414,12 +414,12 @@ footer{padding:60px 0 120px;position:relative;z-index:2}
   <div class="head" style="margin-bottom:40px"><span class="tag">Why Medical Only</span></div>
   <p class="statement" id="stmt">환자는 아픈 상태에서, 대부분 휴대폰으로 병원을 찾습니다. 화려함보다 먼저 필요한 건 <span class="hl">신뢰</span>, <span class="hl">정확한 정보</span>, 그리고 망설임 없이 누를 수 있는 <span class="hl">상담 버튼</span>입니다.</p>
   <div class="points">
-    <article class="pt rv"><span class="no">01</span><div class="ic">📱</div><h3>모바일에서 먼저 완성</h3><p>작은 화면 기준으로 글자 크기, 버튼 간격, 이미지 용량을 먼저 맞춥니다. 진료시간과 위치를 찾느라 헤매지 않게 합니다.</p></article>
-    <article class="pt rv d1"><span class="no">02</span><div class="ic">☎️</div><h3>원클릭 상담 연결</h3><p>전화, 카카오톡 채널, 네이버 예약, 길찾기를 화면 어디서든 한 번에 누를 수 있게 고정 배치합니다.</p></article>
-    <article class="pt rv d2"><span class="no">03</span><div class="ic">🛡️</div><h3>의료광고 기준을 고려한 문구</h3><p>'최고', '100% 완치' 같은 과장 표현, 전후 사진의 무분별한 사용처럼 문제 소지가 있는 표현을 제작 단계에서 걸러냅니다.</p></article>
-    <article class="pt rv"><span class="no">04</span><div class="ic">⚡</div><h3>가볍고 빠른 로딩</h3><p>이미지 최적화와 불필요한 스크립트 제거로 첫 화면이 빠르게 뜨게 합니다. 느린 홈페이지는 환자가 기다려 주지 않습니다.</p></article>
-    <article class="pt rv d1"><span class="no">05</span><div class="ic">🔎</div><h3>검색에 잡히는 구조</h3><p>지역명과 진료과목 중심의 제목·설명 태그, 네이버·구글 검색 등록 기본 세팅까지. 플레이스와 홈페이지가 서로를 보완합니다.</p></article>
-    <article class="pt rv d2"><span class="no">06</span><div class="ic">🎨</div><h3>진료과목별 톤 설계</h3><p>같은 템플릿을 돌려쓰지 않습니다. 치과의 산뜻함, 한의원의 아늑함처럼 병원의 성격부터 정하고 디자인합니다.</p></article>
+    <article class="pt rv"><span class="no">01</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></div><h3>모바일에서 먼저 완성</h3><p>작은 화면 기준으로 글자 크기, 버튼 간격, 이미지 용량을 먼저 맞춥니다. 진료시간과 위치를 찾느라 헤매지 않게 합니다.</p></article>
+    <article class="pt rv d1"><span class="no">02</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div><h3>원클릭 상담 연결</h3><p>전화, 카카오톡 채널, 네이버 예약, 길찾기를 화면 어디서든 한 번에 누를 수 있게 고정 배치합니다.</p></article>
+    <article class="pt rv d2"><span class="no">03</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>의료광고 기준을 고려한 문구</h3><p>'최고', '100% 완치' 같은 과장 표현, 전후 사진의 무분별한 사용처럼 문제 소지가 있는 표현을 제작 단계에서 걸러냅니다.</p></article>
+    <article class="pt rv"><span class="no">04</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>가볍고 빠른 로딩</h3><p>이미지 최적화와 불필요한 스크립트 제거로 첫 화면이 빠르게 뜨게 합니다. 느린 홈페이지는 환자가 기다려 주지 않습니다.</p></article>
+    <article class="pt rv d1"><span class="no">05</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></div><h3>검색에 잡히는 구조</h3><p>지역명과 진료과목 중심의 제목·설명 태그, 네이버·구글 검색 등록 기본 세팅까지. 플레이스와 홈페이지가 서로를 보완합니다.</p></article>
+    <article class="pt rv d2"><span class="no">06</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.9 1.8-1.8 0-1.2-1-1.6-1-2.7 0-1 .8-1.7 1.8-1.7H17a4 4 0 0 0 4-4C21 6.5 17 3 12 3z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10.5" cy="7.5" r="1"/><circle cx="15" cy="7.5" r="1"/></svg></div><h3>진료과목별 톤 설계</h3><p>같은 템플릿을 돌려쓰지 않습니다. 치과의 산뜻함, 한의원의 아늑함처럼 병원의 성격부터 정하고 디자인합니다.</p></article>
   </div>
   <div class="vs">
     <div class="bad rv"><h4>흔히 보는 병원 홈페이지</h4><ul><li>PC 화면을 그대로 줄인 모바일 페이지</li><li>전화번호를 찾으려면 맨 아래까지 스크롤</li><li>몇 년째 바뀌지 않은 진료시간과 공지</li><li>문제 소지가 있는 과장 문구와 무료 이미지</li></ul></div>
@@ -495,10 +495,10 @@ footer{padding:60px 0 120px;position:relative;z-index:2}
 <section class="sec" id="service"><div class="wrap">
   <div class="head"><span class="tag">What We Build</span><h2 class="h2">개원부터 리뉴얼까지,<br><em>필요한 만큼만</em></h2><p class="lead">필요 없는 기능을 끼워 팔지 않습니다. 지금 병원에 꼭 필요한 페이지부터 만들고, 운영하면서 필요해지는 것을 더해 갑니다.</p></div>
   <div class="scope">
-    <article class="sc rv"><span class="rn">I</span><h3>신규 개원 홈페이지</h3><p>개원 일정에 맞춰 병원의 첫인상을 만듭니다.</p><ul><li>병원 소개 · 진료과목</li><li>의료진 · 장비 소개</li><li>진료시간 · 오시는 길</li></ul></article>
-    <article class="sc rv d1"><span class="rn">II</span><h3>기존 홈페이지 리뉴얼</h3><p>오래된 홈페이지를 모바일 중심으로 다시 짭니다.</p><ul><li>모바일 최적화 재설계</li><li>정보 구조 정리</li><li>문구 · 이미지 교체</li></ul></article>
-    <article class="sc rv d2"><span class="rn">III</span><h3>진료과목 소개 페이지</h3><p>특화 진료를 깊이 있게 설명하는 단독 페이지.</p><ul><li>특화 클리닉 · 센터 소개</li><li>진료 과정 안내</li><li>자주 묻는 질문</li></ul></article>
-    <article class="sc rv d3"><span class="rn">IV</span><h3>오픈 후 관리</h3><p>공지, 휴진, 진료시간 변경을 대신 반영합니다.</p><ul><li>공지 · 휴진 업데이트</li><li>사진 · 문구 수정</li><li>도메인 · 호스팅 관리</li></ul></article>
+    <article class="scp rv"><span class="rn">I</span><h3>신규 개원 홈페이지</h3><p>개원 일정에 맞춰 병원의 첫인상을 만듭니다.</p><ul><li>병원 소개 · 진료과목</li><li>의료진 · 장비 소개</li><li>진료시간 · 오시는 길</li></ul></article>
+    <article class="scp rv d1"><span class="rn">II</span><h3>기존 홈페이지 리뉴얼</h3><p>오래된 홈페이지를 모바일 중심으로 다시 짭니다.</p><ul><li>모바일 최적화 재설계</li><li>정보 구조 정리</li><li>문구 · 이미지 교체</li></ul></article>
+    <article class="scp rv d2"><span class="rn">III</span><h3>진료과목 소개 페이지</h3><p>특화 진료를 깊이 있게 설명하는 단독 페이지.</p><ul><li>특화 클리닉 · 센터 소개</li><li>진료 과정 안내</li><li>자주 묻는 질문</li></ul></article>
+    <article class="scp rv d3"><span class="rn">IV</span><h3>오픈 후 관리</h3><p>공지, 휴진, 진료시간 변경을 대신 반영합니다.</p><ul><li>공지 · 휴진 업데이트</li><li>사진 · 문구 수정</li><li>도메인 · 호스팅 관리</li></ul></article>
   </div>
 </div></section>
 
